@@ -1,0 +1,127 @@
+
+[
+{
+  "endpoint" : "signup",
+  "path" : "/signup",
+  "method" : "POST",
+  "request:data" : {
+    "name" : {
+      "type" : "String",
+      "max" : 20,
+      "required" : true
+    },
+    "email": {
+      "type": "String",
+      "max": 30,
+      "required": true
+    },
+    "username" : {
+      "type" : "String",
+      "max" : 30,
+      "required" : true,
+      "unique" : true
+    },
+    "password" : {
+      "type": "String",
+      "max" : 30,
+      "required" : true
+    }
+  }
+},
+  {
+    "endpoint" : "login",
+    "path" : "/login",
+    "method" : "POST",
+    "request:data" : {
+      "username" : {
+        "type" : "String",
+        "max" : 30,
+        "required" : true,
+        "unique" : true
+      },
+      "password" : {
+        "type": "String",
+        "max" : 30,
+        "required" : true
+      }
+    }
+  },
+
+  {
+    "endpoint" : "viewcart",
+    "path" : "/viewcart",
+    "method" : "GET",
+    "response" : {
+      "http-status": 200.
+
+    "response-data" : {
+      "itemname": {
+        "type": "String",
+        "max": 20
+      },
+      "numberofitems": {
+        "type": "Integer",
+        "NotNull": true
+      },
+      "itemprice": {
+        "type": "Integer",
+        "NotNull": true
+      },
+      "deliveryDate": {
+        "type": "Date",
+        "NotNull": true
+      }
+    }
+    }
+  },
+  {
+    "endpoint": "upi",
+    "path": "/payment/upi",
+    "method": "POST",
+    "request:data": {
+      "vpa": {
+        "type": "String",
+        "max": 20,
+        "NotNull": true
+      },
+      "name": {
+        "type": "String",
+        "max": 30,
+        "required": true
+      }
+    }
+  },
+
+  {
+    "endpoint" : "addnewaddress",
+    "path" : "/user/addaddress",
+    "method" : "POST",
+    "request:data" : {
+      "House No" : {
+        "type" : "String",
+        "max" : 20,
+        "NotNull" : true
+      },
+      "Street" : {
+        "type" : "String",
+        "max" : 30,
+        "required" : true
+      },
+      "City" : {
+        "type" : "String",
+        "max" : 30,
+        "required" : true
+      },
+      "State" : {
+        "type" : "String",
+        "max" : 30,
+        "required" : true
+      }
+    },
+    "PinCode" : {
+      "type" : "Integer",
+      "max" : 30,
+      "required" : true
+    }
+  }
+]

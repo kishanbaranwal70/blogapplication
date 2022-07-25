@@ -1,0 +1,27 @@
+{
+  "endpoint" : "cart",
+  "path" : "/cart",
+  "method" : "GET",
+  "request:data" : {
+    "itemname" : {
+      "type" : "String",
+      "max" : 20,
+    },
+    "numberofitems": {
+      "type": "String",
+      "max": 30,
+      "required": true
+    },
+    "username" : {
+      "type" : "String",
+      "max" : 30,
+      "required" : true,
+      "unique" : true
+    },
+    "password" : {
+      "type": "String",
+      "max" : 30,
+      "required" : true
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "endpoint" : "login",
+  "path" : "/login",
+  "method" : "POST",
+  "request:data" : {
+    "username" : {
+      "type" : "String",
+      "max" : 30,
+      "required" : true,
+      "unique" : true
+    },
+    "password" : {
+      "type": "String",
+      "max" : 30,
+      "required" : true
+    }
+  }
+}
